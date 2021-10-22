@@ -1,0 +1,183 @@
+/* GLOBAL */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  background-color: #262630;
+}
+
+
+h1 {
+  font-weight: 500;
+}
+
+p {
+  line-height: 2;
+  font-weight: 300;
+}
+
+label{
+  font-weight: 400;
+}
+
+.container-fluid {
+  padding: 5% 10%;
+}
+
+.intro_text{
+ font-size: 1.4rem;
+ margin-top: 30px;
+}
+
+/* TOP NAP */
+.top_nav {
+padding: 2% 0;
+}
+
+.top_nav a {
+  padding: 0 10px;
+  color: #fff;
+}
+
+.user_name{
+  color:#febd69;
+}
+
+
+
+/* FORMS */
+.forms {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.btn_global {
+  background-color: #febd69;
+}
+
+.btn_global:hover{
+  color: #262630;
+}
+
+input:focus {
+  color:#febd69;
+}
+
+
+.warning_msg {
+  margin-top: 10px;
+  color:#e7553a;
+  font-size: 1.3rem;
+}
+
+.has-error .control-label, .has-error .help-block {
+  color:#e7553a;
+}
+
+
+
+/* ITEMS */
+
+.items{
+  background-color: #fff;
+  color: #262630;
+  margin-bottom: 50px;
+}
+
+.items .container-fluid {
+  padding: 3% 10% 7% 10%;
+}
+
+
+
+
+.info {
+  font-size: 1.3rem;
+  color: #7e7371;
+}
+
+.row_items{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 5%;
+  border: solid 1px #D8E1E9;
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
+
+}
+
+/* @media (max-width: 767px) {
+  .card {
+    margin-top: 30px;
+  }
+} */
+
+.icon_prod{
+  padding: 0 10px;
+  color: #febd69;
+}
+.icon_prod:hover{
+  color: #7e7371;
+}
+
+
+
+/* FAQ */
+summary {
+  font-size: 1.25rem;
+  font-weight: 500;
+  background-color: #fff;
+  color: #333;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border-radius: 0.25rem;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+details > summary::after {
+  position: absolute;
+  content: "+";
+  right: 20px;
+}
+details[open] > summary::after {
+  position: absolute;
+  content: "-";
+  right: 20px;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+@keyframes sweep {
+  0%    {opacity: 0; margin-top: -10px}
+  100%  {opacity: 1; margin-top: 0px}
+}
+
+
+/* FOOTER */
+.bottom_container {
+  background-color: #febd69;
+  padding: 10px 0 10px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.copyright {
+  font-size: 1rem;
+  padding: 20px 0 0 0;
+}

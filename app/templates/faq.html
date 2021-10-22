@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+
+<div class="container-fluid">
+  <details open>
+    <summary>Is it a working website?</summary>
+    <div class="faq__content">
+      <p>This website was created just as a personal project for a portfolio. There is no wish to commercialize it but if it can help you, you can still use it. Be aware that it could stop working at any moment and that the design (website/email) is of course not optimal.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>What is a price limit?</summary>
+    <div class="faq__content">
+      <p>The price limit is the amount for which you want to receive a notification if the product's price decreases below that amount</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>When do we receive email notification?</summary>
+    <div class="faq__content">
+      <p>If the price of the product is lower that your limit price, an email <i>(an ugly email from a gmail account)</i> will be sent to you.</p>
+    </div>
+  </details>
+
+
+  <details>
+    <summary>Is my price limit updated if a better price has been found?</summary>
+    <div class="faq__content">
+      <p>Yes, each time a better price has been found, your price limit is updated too to that new price.</p>
+    </div>
+  </details>
+
+</div>
+
+{% endblock %}

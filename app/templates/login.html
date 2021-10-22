@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block main %}
+
+<div class="container-fluid">
+    <h1>Login</h1>
+    <p class="intro_text">login to view and update/delete your products</p>
+
+    <div class="forms">
+
+        {{ wtf.quick_form(form, action=url_for('main.login') ) }}
+
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+
+</div>
+
+
+
+{% endblock %}
