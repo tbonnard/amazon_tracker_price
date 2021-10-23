@@ -1,3 +1,2 @@
-from app import db
-from app.models import User, Item
-db.create_all()
+from app import db, create_app
+db.create_all(app=create_app())
