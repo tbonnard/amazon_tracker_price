@@ -1,4 +1,3 @@
-from app import db, create_app
-app = create_app()
-app.app_context().push()
+from app import db
+from app.models import User, Item
 db.create_all()
