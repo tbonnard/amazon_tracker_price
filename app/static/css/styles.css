@@ -25,9 +25,13 @@ label{
   padding: 5% 10%;
 }
 
-.intro_text{
+.intro_text, .para_text{
  font-size: 1.4rem;
  margin-top: 30px;
+}
+
+.para_text {
+  color: #7e7371;
 }
 
 /* TOP NAP */
@@ -52,6 +56,14 @@ padding: 2% 0;
   margin: 0 auto;
   margin-top: 50px;
 }
+
+
+@media (max-width: 900px) {
+  .forms {
+    width: 75%;
+  }
+}
+
 
 .btn_global {
   background-color: #febd69;

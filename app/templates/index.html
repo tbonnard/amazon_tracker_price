@@ -35,6 +35,7 @@
     <div class="container-fluid">
             <h3>Products on your list</h3>
 
+{% if items|length >0 %}
     <div class="row_items">
     {% for i in items%}
               <div class="card">
@@ -53,8 +54,11 @@
                   </div>
             </div>
   {% endfor %}
-
         </div>
+{% else %}
+<p class="para_text">no product on your watchlist!</p>
+{% endif %}
+
     </div>
 </div>
 {% endif %}
