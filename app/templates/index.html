@@ -46,7 +46,7 @@
           <i class="info">could not determine the product's name</i>
           {% endif %}
           <p class="card-text">
-          <p>Price limit: ${{ i.price_limit }}</p>
+          <p>Limit price: ${{ i.price_limit }}</p>
           <a href="{{ i.url }}" target="_blank" title="Go to the product"><i class="far fa-eye icon_prod"></i></a>
           <a href="{{ url_for('main.delete', product_id = i.id) }}" title="Delete the product from your list"><i class="fas fa-trash-alt icon_prod"></i></a>
         </div>
