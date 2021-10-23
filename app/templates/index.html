@@ -35,28 +35,27 @@
     <div class="container-fluid">
             <h3>Products on your list</h3>
 
-{% if items != "" %}
+{% if items is not none %}
     <div class="row_items">
-    {% for i in items%}
-              <div class="card">
-                  <div class="card-body">
-                      {% if i.product_title is not none%}
-                      <h5 class="card-title">{{ i.product_title }}</h5>
-                      {% else %}
-                      <h5 class="card-title">Product</h5>
-                      <i class="info">could not determine the product's name</i>
-                      {% endif %}
-                      <p class="card-text">
-                      <p>Price limit: ${{ i.price_limit }}</p>
-                      <a href="{{ i.url }}" target="_blank" title="Go to the product"><i class="far fa-eye icon_prod"></i></a>
-                      <a href="{{ url_for('main.delete', product_id = i.id) }}" title="Delete the product from your list"><i class="fas fa-trash-alt icon_prod"></i></a>
-                      </p>
-                  </div>
-            </div>
-  {% endfor %}
+      {% for i in items%}
+      <div class="card">
+        <div class="card-body">
+          {% if i.product_title is not none%}
+          <h5 class="card-title">{{ i.product_title }}</h5>
+          {% else %}
+          <h5 class="card-title">Product</h5>
+          <i class="info">could not determine the product's name</i>
+          {% endif %}
+          <p class="card-text">
+          <p>Price limit: ${{ i.price_limit }}</p>
+          <a href="{{ i.url }}" target="_blank" title="Go to the product"><i class="far fa-eye icon_prod"></i></a>
+          <a href="{{ url_for('main.delete', product_id = i.id) }}" title="Delete the product from your list"><i class="fas fa-trash-alt icon_prod"></i></a>
         </div>
+      </div>
+      {% endfor %}
+    </div>
 {% else %}
-<p class="para_text">no product on your watchlist. Add a new one!</p>
+<p class="para_text">no product added to your watchlist!</p>
 {% endif %}
 
     </div>
