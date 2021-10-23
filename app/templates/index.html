@@ -35,7 +35,7 @@
     <div class="container-fluid">
             <h3>Products on your list</h3>
 
-{% if items is not none %}
+{% if items is not none or if items != "" %}
     <div class="row_items">
       {% for i in items%}
       <div class="card">
