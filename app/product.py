@@ -20,7 +20,9 @@ class Product:
 
     def get_product_title(self):
         item_name = self.soup.find(name='span', id="productTitle")
-        return item_name.getText().replace(u'\xa0', u'').replace('\n', '').replace(u'\xe9', u'')
+        item=item_name.getText().replace(u'\xa0', u'').replace('\n', '').replace(u'\xe9', u'').replace(u"\xe0", u"")
+        # print(item)
+        return item
 
     def define_price(self):
         for i in self.ids:
@@ -32,7 +34,7 @@ class Product:
             else:
                 if price_item is not None:
                     try:
-                        price = float(price_item.getText().strip().replace("$", "").replace(" ", "").replace('\n', '').replace(u'\xa0', u'').replace("'", "").replace(",", ".").replace(u'\xe9', u''))
+                        price = float(price_item.getText().strip().replace("$", "").replace(" ", "").replace('\n', '').replace(u'\xa0', u'').replace("'", "").replace(",", ".").replace(u'\xe9', u'').replace(u"\xe0", u""))
                     except ValueError as e:
                         print("can not convert", e)
                     else:

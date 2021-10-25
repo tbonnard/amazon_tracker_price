@@ -15,4 +15,4 @@ class Notification:
         with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
             connection.starttls()
             connection.login(user=self.MY_EMAIL, password=self.PWD)
-            connection.sendmail(from_addr=self.MY_EMAIL, to_addrs=self.to_email, msg=self.message)
+            connection.sendmail(from_addr=self.MY_EMAIL, to_addrs=self.to_email, msg=self.message.encode('utf-8'))
