@@ -3,7 +3,7 @@ import os
 
 class Notification:
     MY_EMAIL = os.environ.get("MY_EMAIL")
-    PWD = os.environ.get("PWD")
+    PWD = os.environ.get("password_gm")
 
     def __init__(self, to_email, item, new_price):
         self.to_email = to_email
