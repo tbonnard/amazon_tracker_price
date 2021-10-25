@@ -1,1 +1,1 @@
-web: gunicorn run:app --reload=False
+web: gunicorn run:app --daemon

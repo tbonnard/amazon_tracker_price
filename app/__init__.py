@@ -33,7 +33,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from .script import script_check_price_users
 
 scheduler = BackgroundScheduler()
-scheduler.add_job(func=script_check_price_users, trigger="interval", seconds=20)
+scheduler.add_job(func=script_check_price_users, trigger="interval", seconds=86400)
 scheduler.start()
 
 # Shut down the scheduler when exiting the app
