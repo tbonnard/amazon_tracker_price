@@ -12,8 +12,8 @@ class Notification:
         self.message = f"Subject:Better price for {self.item.product_title}!! \n\n<a href='{self.item.url}'>{self.item.product_title}</a> is now at ${self.new_price}.\n\nYour price limit has been updated to ${self.new_price}"
 
     def send_email_notification(self):
-        print(self.MY_EMAIL)
-        print(self.PWD)
+        print(f"my email: {self.MY_EMAIL}")
+        print(f"my pwd: {self.PWD}")
         with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
             connection.starttls()
             connection.login(user=self.MY_EMAIL, password=self.PWD)
