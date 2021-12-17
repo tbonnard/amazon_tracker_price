@@ -26,9 +26,10 @@ class Product:
 
     def define_price(self):
         for i in self.ids:
+            print(i)
             try:
                 price_item = self.soup.select_one(i)
-                #print(f"item: {price_item}")
+                print(f"item: {price_item}")
             except ValueError:
                 print('not found')
             else:
